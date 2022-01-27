@@ -53,3 +53,12 @@ void rellenaDiagonal(int m[3][3],int numero){
         }
     }
 }
+/**
+ * @brief 
+ * 
+ * @param m la matriz a comprobar
+ * @return int 0 sí no hay, 1 si sí hay del jugador 1, y 2 si sí hay del jugador 2
+ */
+int hayTresEnRaya(int m[3][3]){  
+
+}
