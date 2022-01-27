@@ -56,6 +56,6 @@ void rellenaDiagonal(int m[3][3],int numero){
 
 
 /*
-int hayTresEnRaya(int m[3][3]){  
+int comprueba3enraya(int m[3][3]){  
 
 }*/
