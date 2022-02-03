@@ -4,21 +4,24 @@ int hayPalabrotas(char m[256]);
 char* filtraPalabrotas(char m[256]);
 
 int main(){
-    char mensaje[256]=" Papá, quiero caca y pipi, he dicho caca ";
+    char mensaje[256]=" Papá, quiero caca y pipi, he dicho culo ";
     printf(" \n Hay %d tacos \n",hayPalabrotas(mensaje));
 }
 
 int hayPalabrotas(char m[256]){
-    char tacos[2][25]={
+    char tacos[3][25]={
         "caca",
-        "pipi"
+        "pipi",
+        "culo"
     };
     int nTacos=0;
 
     int i=0;
     while(i<256&&m[i]!='\0'){
         //Buscando en el array de palabrotas la primera letra
-        for(int j=0;j<2;j++){
+        for(int j=0;j<3;j++){
+            //Si la letra coincide con la primera de alguna palabrota
+            // y la anterior es un espacio o es la primera letra, analizo
             if(m[i]==tacos[j][0] && (i==0 || m[i-1]==' ')){
                 int tmp=i; //guardo la posición actual de la cadena por si hay que rebobinar
                 int k=0;
@@ -44,7 +47,6 @@ int hayPalabrotas(char m[256]){
     
     }
     return nTacos;
-
 }
 
 char* filtraPalabrotas(char m[256]){
